@@ -440,8 +440,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"name\": \"b\",
     \"description\": \"Et animi quos velit et fugiat.\",
     \"website\": \"d\",
-    \"is_featured\": true,
-    \"level\": \"silver\",
+    \"is_featured\": false,
+    \"level\": \"diamond\",
     \"image\": \"l\",
     \"location\": \"j\",
     \"specialties\": [
@@ -466,8 +466,8 @@ let body = {
     "name": "b",
     "description": "Et animi quos velit et fugiat.",
     "website": "d",
-    "is_featured": true,
-    "level": "silver",
+    "is_featured": false,
+    "level": "diamond",
     "image": "l",
     "location": "j",
     "specialties": [
@@ -625,7 +625,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>level</code></b>&nbsp;&nbsp;
@@ -634,10 +634,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="POSTapi-partners"
-               value="silver"
+               value="diamond"
                data-component="body">
     <br>
-<p>Example: <code>silver</code></p>
+<p>Example: <code>diamond</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>diamond</code></li> <li><code>platinum</code></li> <li><code>silver</code></li></ul>
         </div>
@@ -857,8 +857,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"name\": \"b\",
     \"description\": \"Et animi quos velit et fugiat.\",
     \"website\": \"d\",
-    \"is_featured\": false,
-    \"level\": \"platinum\",
+    \"is_featured\": true,
+    \"level\": \"diamond\",
     \"image\": \"l\",
     \"location\": \"j\",
     \"specialties\": [
@@ -883,8 +883,8 @@ let body = {
     "name": "b",
     "description": "Et animi quos velit et fugiat.",
     "website": "d",
-    "is_featured": false,
-    "level": "platinum",
+    "is_featured": true,
+    "level": "diamond",
     "image": "l",
     "location": "j",
     "specialties": [
@@ -1059,7 +1059,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>level</code></b>&nbsp;&nbsp;
@@ -1068,10 +1068,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="PUTapi-partners--id-"
-               value="platinum"
+               value="diamond"
                data-component="body">
     <br>
-<p>Example: <code>platinum</code></p>
+<p>Example: <code>diamond</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>diamond</code></li> <li><code>platinum</code></li> <li><code>silver</code></li></ul>
         </div>

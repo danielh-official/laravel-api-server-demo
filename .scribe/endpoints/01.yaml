@@ -107,7 +107,7 @@ endpoints:
         name: is_featured
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -118,7 +118,7 @@ endpoints:
         name: level
         description: ''
         required: false
-        example: silver
+        example: diamond
         type: string
         enumValues:
           - diamond
@@ -165,8 +165,8 @@ endpoints:
       name: b
       description: 'Et animi quos velit et fugiat.'
       website: d
-      is_featured: true
-      level: silver
+      is_featured: false
+      level: diamond
       image: l
       location: j
       specialties:
@@ -312,7 +312,7 @@ endpoints:
         name: is_featured
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -323,7 +323,7 @@ endpoints:
         name: level
         description: ''
         required: false
-        example: platinum
+        example: diamond
         type: string
         enumValues:
           - diamond
@@ -370,8 +370,8 @@ endpoints:
       name: b
       description: 'Et animi quos velit et fugiat.'
       website: d
-      is_featured: false
-      level: platinum
+      is_featured: true
+      level: diamond
       image: l
       location: j
       specialties:
