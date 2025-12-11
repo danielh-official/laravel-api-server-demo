@@ -2,6 +2,19 @@
 
 An API server built with Laravel.
 
+## Getting Started
+
+1. Clone: `git clone {repo url}`
+2. Run `composer setup`
+3. Run `php artisan db:seed`
+4. Run `php artisan app:give-user-token 1` and copy the resulting token
+5. Navigate to /docs and play around with the API
+
+## Included
+
+- API & Documentation
+- Tests
+
 ## Laravel Stuff
 
 <details>
