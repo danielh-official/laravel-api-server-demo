@@ -153,11 +153,14 @@ endpoints:
       level:
         custom: []
         name: level
-        description: 'Must not be greater than 255 characters.'
+        description: ''
         required: false
-        example: l
+        example: diamond
         type: string
-        enumValues: []
+        enumValues:
+          - diamond
+          - platinum
+          - silver
         exampleWasSpecified: false
         nullable: true
         deprecated: false
@@ -166,7 +169,7 @@ endpoints:
         name: image
         description: 'Must be a valid URL. Must not be greater than 255 characters.'
         required: false
-        example: j
+        example: l
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -177,7 +180,7 @@ endpoints:
         name: location
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: 'n'
+        example: j
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -189,7 +192,7 @@ endpoints:
         description: 'Must not be greater than 255 characters.'
         required: true
         example:
-          - i
+          - 'n'
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -200,11 +203,11 @@ endpoints:
       description: 'Et animi quos velit et fugiat.'
       website: d
       is_featured: false
-      level: l
-      image: j
-      location: 'n'
+      level: diamond
+      image: l
+      location: j
       specialties:
-        - i
+        - 'n'
     fileParameters: []
     responses: []
     responseFields: []
@@ -338,7 +341,7 @@ endpoints:
         name: is_featured
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -347,11 +350,14 @@ endpoints:
       level:
         custom: []
         name: level
-        description: 'Must not be greater than 255 characters.'
+        description: ''
         required: false
-        example: l
+        example: diamond
         type: string
-        enumValues: []
+        enumValues:
+          - diamond
+          - platinum
+          - silver
         exampleWasSpecified: false
         nullable: true
         deprecated: false
@@ -360,7 +366,7 @@ endpoints:
         name: image
         description: 'Must be a valid URL. Must not be greater than 255 characters.'
         required: false
-        example: j
+        example: l
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -371,7 +377,7 @@ endpoints:
         name: location
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: 'n'
+        example: j
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -383,7 +389,7 @@ endpoints:
         description: 'Must not be greater than 255 characters.'
         required: true
         example:
-          - i
+          - 'n'
         type: 'string[]'
         enumValues: []
         exampleWasSpecified: false
@@ -393,12 +399,12 @@ endpoints:
       name: b
       description: 'Et animi quos velit et fugiat.'
       website: d
-      is_featured: false
-      level: l
-      image: j
-      location: 'n'
+      is_featured: true
+      level: diamond
+      image: l
+      location: j
       specialties:
-        - i
+        - 'n'
     fileParameters: []
     responses: []
     responseFields: []

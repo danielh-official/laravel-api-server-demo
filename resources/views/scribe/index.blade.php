@@ -396,11 +396,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"description\": \"Et animi quos velit et fugiat.\",
     \"website\": \"d\",
     \"is_featured\": false,
-    \"level\": \"l\",
-    \"image\": \"j\",
-    \"location\": \"n\",
+    \"level\": \"diamond\",
+    \"image\": \"l\",
+    \"location\": \"j\",
     \"specialties\": [
-        \"i\"
+        \"n\"
     ]
 }"
 </code></pre></div>
@@ -421,11 +421,11 @@ let body = {
     "description": "Et animi quos velit et fugiat.",
     "website": "d",
     "is_featured": false,
-    "level": "l",
-    "image": "j",
-    "location": "n",
+    "level": "diamond",
+    "image": "l",
+    "location": "j",
     "specialties": [
-        "i"
+        "n"
     ]
 };
 
@@ -576,10 +576,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="POSTapi-partners"
-               value="l"
+               value="diamond"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>l</code></p>
+<p>Example: <code>diamond</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>diamond</code></li> <li><code>platinum</code></li> <li><code>silver</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -588,10 +590,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="image"                data-endpoint="POSTapi-partners"
-               value="j"
+               value="l"
                data-component="body">
     <br>
-<p>Must be a valid URL. Must not be greater than 255 characters. Example: <code>j</code></p>
+<p>Must be a valid URL. Must not be greater than 255 characters. Example: <code>l</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
@@ -600,10 +602,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="POSTapi-partners"
-               value="n"
+               value="j"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Must not be greater than 255 characters. Example: <code>j</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>specialties</code></b>&nbsp;&nbsp;
@@ -780,12 +782,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"name\": \"b\",
     \"description\": \"Et animi quos velit et fugiat.\",
     \"website\": \"d\",
-    \"is_featured\": false,
-    \"level\": \"l\",
-    \"image\": \"j\",
-    \"location\": \"n\",
+    \"is_featured\": true,
+    \"level\": \"diamond\",
+    \"image\": \"l\",
+    \"location\": \"j\",
     \"specialties\": [
-        \"i\"
+        \"n\"
     ]
 }"
 </code></pre></div>
@@ -805,12 +807,12 @@ let body = {
     "name": "b",
     "description": "Et animi quos velit et fugiat.",
     "website": "d",
-    "is_featured": false,
-    "level": "l",
-    "image": "j",
-    "location": "n",
+    "is_featured": true,
+    "level": "diamond",
+    "image": "l",
+    "location": "j",
     "specialties": [
-        "i"
+        "n"
     ]
 };
 
@@ -969,7 +971,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>level</code></b>&nbsp;&nbsp;
@@ -978,10 +980,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="level"                data-endpoint="PUTapi-partners--id-"
-               value="l"
+               value="diamond"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>l</code></p>
+<p>Example: <code>diamond</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>diamond</code></li> <li><code>platinum</code></li> <li><code>silver</code></li></ul>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -990,10 +994,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="image"                data-endpoint="PUTapi-partners--id-"
-               value="j"
+               value="l"
                data-component="body">
     <br>
-<p>Must be a valid URL. Must not be greater than 255 characters. Example: <code>j</code></p>
+<p>Must be a valid URL. Must not be greater than 255 characters. Example: <code>l</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location</code></b>&nbsp;&nbsp;
@@ -1002,10 +1006,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="location"                data-endpoint="PUTapi-partners--id-"
-               value="n"
+               value="j"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+<p>Must not be greater than 255 characters. Example: <code>j</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>specialties</code></b>&nbsp;&nbsp;
