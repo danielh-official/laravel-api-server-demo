@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enum\PartnerLevel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,7 +22,7 @@ class PartnerFactory extends Factory
             'description' => $this->faker->paragraph,
             'website' => $this->faker->url,
             'is_featured' => $this->faker->boolean,
-            'level' => $this->faker->word,
+            'level' => $this->faker->randomElement(PartnerLevel::cases()),
             'image' => $this->faker->imageUrl,
             'location' => $this->faker->city,
             'specialties' => $this->faker->words(3, true),

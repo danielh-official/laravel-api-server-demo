@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Enum\PartnerLevel;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class PartnerRequest extends FormRequest
 {
@@ -26,7 +28,10 @@ class PartnerRequest extends FormRequest
             'description' => 'nullable|string|max:5000',
             'website' => 'nullable|url|max:255',
             'is_featured' => 'nullable|boolean',
-            'level' => 'nullable|string|max:255',
+            'level' => [
+                'nullable',
+                new Enum(PartnerLevel::class),
+            ],
             'image' => 'nullable|url|max:255',
             'location' => 'nullable|string|max:255',
             'specialties' => 'nullable|array',
