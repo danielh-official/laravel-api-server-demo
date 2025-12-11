@@ -54,6 +54,9 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "format": [
+            "vendor/bin/pint"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
