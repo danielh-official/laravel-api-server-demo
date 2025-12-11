@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
+/**
+ * @group Partners
+ */
 class PartnerController extends Controller implements HasMiddleware
 {
     public static function middleware(): array
