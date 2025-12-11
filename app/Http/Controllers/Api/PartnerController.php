@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PartnerRequest;
 use App\Models\Partner;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
@@ -34,20 +35,8 @@ class PartnerController extends Controller implements HasMiddleware
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PartnerRequest $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string|max:5000',
-            'website' => 'nullable|url|max:255',
-            'is_featured' => 'nullable|boolean',
-            'level' => 'nullable|string|max:255',
-            'image' => 'nullable|url|max:255',
-            'location' => 'nullable|string|max:255',
-            'specialties' => 'nullable|array',
-            'specialties.*' => 'required|string|max:255',
-        ]);
-
         return Partner::create($request->all())->toResource();
     }
 
@@ -62,20 +51,8 @@ class PartnerController extends Controller implements HasMiddleware
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Partner $partner)
+    public function update(PartnerRequest $request, Partner $partner)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string|max:5000',
-            'website' => 'nullable|url|max:255',
-            'is_featured' => 'nullable|boolean',
-            'level' => 'nullable|string|max:255',
-            'image' => 'nullable|url|max:255',
-            'location' => 'nullable|string|max:255',
-            'specialties' => 'nullable|array',
-            'specialties.*' => 'required|string|max:255',
-        ]);
-
         return $partner->update($request->all());
     }
 

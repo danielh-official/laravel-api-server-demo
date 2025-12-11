@@ -141,6 +141,16 @@ describe('create', function () {
         ]);
     });
 
+    it('validates partner data', function (array $invalidData, string $errorField) {
+        Sanctum::actingAs(User::factory()->create(), ['edit-partners']);
+
+        postJson(route('api.partners.store'), $invalidData)
+            ->assertUnprocessable()
+            ->assertJsonValidationErrors($errorField);
+
+        assertDatabaseEmpty('partners');
+    })->with('invalid partner data');
+
     it('cannot create a new partner without the edit-partners ability', function () {
         Sanctum::actingAs(User::factory()->create(), []);
 
@@ -180,6 +190,16 @@ describe('update', function () {
             'name' => 'Updated Name',
         ]);
     });
+
+    it('validates partner data', function (array $invalidData, string $errorField) {
+        $partner = Partner::factory()->create();
+
+        Sanctum::actingAs(User::factory()->create(), ['edit-partners']);
+
+        putJson(route('api.partners.update', $partner), $invalidData)
+            ->assertUnprocessable()
+            ->assertJsonValidationErrors($errorField);
+    })->with('invalid partner data');
 
     it('cannot update a partner without the edit-partners ability', function () {
         $partner = Partner::factory()->create([
@@ -260,3 +280,62 @@ describe('delete', function () {
         assertDatabaseCount('partners', 1);
     });
 });
+
+dataset('invalid partner data', [
+    'name is required' => [
+        ['description' => 'Test'],
+        'name',
+    ],
+    'name must be a string' => [
+        ['name' => 123],
+        'name',
+    ],
+    'name max 255 characters' => [
+        ['name' => str_repeat('a', 256)],
+        'name',
+    ],
+    'description max 5000 characters' => [
+        ['name' => 'Test', 'description' => str_repeat('a', 5001)],
+        'description',
+    ],
+    'website must be a valid URL' => [
+        ['name' => 'Test', 'website' => 'not-a-url'],
+        'website',
+    ],
+    'website max 255 characters' => [
+        ['name' => 'Test', 'website' => 'https://'.str_repeat('a', 250).'.com'],
+        'website',
+    ],
+    'is_featured must be boolean' => [
+        ['name' => 'Test', 'is_featured' => 'not-boolean'],
+        'is_featured',
+    ],
+    'level max 255 characters' => [
+        ['name' => 'Test', 'level' => str_repeat('a', 256)],
+        'level',
+    ],
+    'image must be a valid URL' => [
+        ['name' => 'Test', 'image' => 'not-a-url'],
+        'image',
+    ],
+    'image max 255 characters' => [
+        ['name' => 'Test', 'image' => 'https://'.str_repeat('a', 250).'.com'],
+        'image',
+    ],
+    'location max 255 characters' => [
+        ['name' => 'Test', 'location' => str_repeat('a', 256)],
+        'location',
+    ],
+    'specialties must be an array' => [
+        ['name' => 'Test', 'specialties' => 'not-an-array'],
+        'specialties',
+    ],
+    'specialties items must be strings' => [
+        ['name' => 'Test', 'specialties' => [123]],
+        'specialties.0',
+    ],
+    'specialties items max 255 characters' => [
+        ['name' => 'Test', 'specialties' => [str_repeat('a', 256)]],
+        'specialties.0',
+    ],
+]);
