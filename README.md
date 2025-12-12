@@ -4,7 +4,13 @@ An API server built with Laravel.
 
 ## Getting Started
 
-1. Clone: `git clone https://github.com/danielh-official/laravel-api-server-demo.git`
+1. Fork and clone
+
+```bash
+git clone https://github.com/YOUR-USERNAME/laravel-api-server-demo.git
+cd laravel-api-server-demo
+```
+
 2. Run `composer setup`
 3. Run `php artisan db:seed`
 4. Run `php artisan app:give-user-token 1` and copy the resulting token
